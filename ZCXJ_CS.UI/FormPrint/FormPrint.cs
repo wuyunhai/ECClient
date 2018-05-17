@@ -1,6 +1,5 @@
 ﻿using DM_API;
 using SuperSocket.ClientEngine;
-//using SuperSocket.ClientEngine;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,7 +13,7 @@ namespace ZCXJ_CS.UI
     public partial class FormPrint : FormBase
     {
         #region var
-         private AsyncTcpSession client;
+       private AsyncTcpSession client;
 
         private Dictionary<int, string> dicAnimals; 
         public LogHelper log;
@@ -189,25 +188,25 @@ namespace ZCXJ_CS.UI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            //if (client != null)
-            //{
-            //    client.Close();
-            //    client = null;
-            //}
+            if (client != null)
+            {
+                client.Close();
+                client = null;
+            }
             btnOK.Enabled = false;
             btnCancel.Enabled = true;
             try
             {
-                //client = new AsyncTcpSession(new IPEndPoint(IPAddress.Parse(GlobalData.EQCServerIP), Convert.ToInt32(GlobalData.EQCServerPort)), 1024000);
+                client = new AsyncTcpSession(new IPEndPoint(IPAddress.Parse(GlobalData.EQCServerIP), Convert.ToInt32(GlobalData.EQCServerPort)), 1024000);
 
-                //#region bind events
-                //client.Closed += Client_Closed; ;
-                //client.Connected += client_Connected;
-                //client.DataReceived += client_DataReceived;
-                //client.Error += client_Error;
-                //#endregion
+                #region bind events
+                client.Closed += Client_Closed; ;
+                client.Connected += client_Connected;
+                client.DataReceived += client_DataReceived;
+                client.Error += client_Error;
+                #endregion
 
-                //client.Connect();
+                client.Connect();
             }
             catch (Exception ex)
             {
@@ -215,26 +214,26 @@ namespace ZCXJ_CS.UI
             }
         }
 
-        //private void Client_Closed(object sender, EventArgs e)
-        //{
-        //    OnDisplayLog("客户端主动关闭连接！");
-        //}
+        private void Client_Closed(object sender, EventArgs e)
+        {
+            OnDisplayLog("客户端主动关闭连接！");
+        }
 
-        //private void client_Error(object sender, ErrorEventArgs e)
-        //{
-        //    OnDisplayLog(e.Exception.Message);
-        //}
+        private void client_Error(object sender, ErrorEventArgs e)
+        {
+            OnDisplayLog(e.Exception.Message);
+        }
 
-        //private void client_DataReceived(object sender, DataEventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        private void client_DataReceived(object sender, DataEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
-        //private void client_Connected(object sender, EventArgs e)
-        //{
-        //    OnDisplayLog("连接成功！");
-        //}
-         
+        private void client_Connected(object sender, EventArgs e)
+        {
+            OnDisplayLog("连接成功！");
+        }
+
 
         #endregion
 

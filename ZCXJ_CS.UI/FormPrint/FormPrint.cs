@@ -1,5 +1,4 @@
 ﻿using DM_API;
-using SuperSocket.ClientEngine;
 //using SuperSocket.ClientEngine;
 using System;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ namespace ZCXJ_CS.UI
     {
         #region var
 
-        private AsyncTcpSession client;
+       // private AsyncTcpSession client;
 
         private Dictionary<int, string> dicAnimals; 
         public LogHelper log;

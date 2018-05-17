@@ -5,16 +5,15 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
-using ZCXJ_CS.Utilities; 
-using ZCXJ_CS.UI;
-using ZCXJ_CS.Applications;
 using System.Reflection;
 using System.ComponentModel;
 using System.Net.NetworkInformation;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition;
- 
 using CCWin;
+using ZCXJ_CS.Applications;
+using ZCXJ_CS.UI;
+using ZCXJ_CS.Utilities;
 
 namespace ZCXJ_CS.Presentation
 {
@@ -48,7 +47,7 @@ namespace ZCXJ_CS.Presentation
         private LogHelper log;
         //配置文件助手
         private ConfigHelper cfgHelper;
-    
+ 
 
         #endregion
 
@@ -176,7 +175,7 @@ namespace ZCXJ_CS.Presentation
                 var catalog = new AggregateCatalog();
                 catalog.Catalogs.Add(new DirectoryCatalog(Application.StartupPath + "\\Plugins\\UI\\"));
                 _container = new CompositionContainer(catalog);
-                this._container.ComposeParts(this);
+                _container.ComposeParts(this);
             }
             catch (Exception ex)
             {
@@ -455,7 +454,7 @@ namespace ZCXJ_CS.Presentation
         /// <param name="e"></param>
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr = DlgBox.Show("确定退出本系统吗？", "退出系统", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             DialogResult dr = DlgBox.Show("确定退出本系统吗？", "退出系统", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;

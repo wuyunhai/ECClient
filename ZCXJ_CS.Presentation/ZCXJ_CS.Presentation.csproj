@@ -43,6 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -52,6 +53,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>metasystem-logo.ico</ApplicationIcon>
@@ -72,10 +74,6 @@
     <Reference Include="CSkin">
       <HintPath>..\Dlls\CSkin.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -89,9 +87,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="Windows7ToolStripRenderer">
       <HintPath>..\Dlls\Windows7ToolStripRenderer.dll</HintPath>
-    </Reference>
-    <Reference Include="YgControls">
-      <HintPath>..\ZCXJ_CS.UI\YgControls\obj\Debug\YgControls.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -130,28 +125,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ZCXJ_CS.UI\UIBase\UIBase.csproj">
-      <Project>{695A088F-0592-4C1C-901D-69D8C6E6F6D9}</Project>
-      <Name>UIBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\ConfigHelper\ConfigHelper.csproj">
-      <Project>{E202C521-22E9-477E-B376-277935A43978}</Project>
-      <Name>ConfigHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\JsonHelper\JsonHelper.csproj">
-      <Project>{DF903017-CA0F-430A-A9AA-4DDC4C355449}</Project>
-      <Name>JsonHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\LogHelper\LogHelper.csproj">
-      <Project>{43DCF446-4179-46C4-9C5C-BFB5D87E4897}</Project>
-      <Name>LogHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Applications\ZCXJ_CS.Applications.csproj">
-      <Project>{CCC4051E-9B2C-4DD1-92BF-D4FDB959F077}</Project>
-      <Name>ZCXJ_CS.Applications</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Res\derun.png" />
     <None Include="bin\Res\metasystem-logo.ico" />
     <Content Include="metasystem-logo.ico" />
@@ -173,6 +146,20 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZCXJ_CS.Applications\ZCXJ_CS.Applications.csproj">
+      <Project>{ccc4051e-9b2c-4dd1-92bf-d4fdb959f077}</Project>
+      <Name>ZCXJ_CS.Applications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZCXJ_CS.UI\UIBase\UIBase.csproj">
+      <Project>{695a088f-0592-4c1c-901d-69d8c6e6f6d9}</Project>
+      <Name>UIBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZCXJ_CS.Utilities\Common\Common.csproj">
+      <Project>{26b929f0-e61c-4905-9f07-9fe59324986d}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

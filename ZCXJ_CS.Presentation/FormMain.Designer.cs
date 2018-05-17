@@ -46,8 +46,7 @@
             this.tabPageLog = new CCWin.SkinControl.SkinTabPage();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.tabCtrlBottom = new CCWin.SkinControl.SkinTabControl();
-
-            this.tabCtrlMain = new CCWin.SkinControl.SkinTabControl();
+             this.tabCtrlMain = new CCWin.SkinControl.SkinTabControl();
             this.LogPage = new CCWin.SkinControl.SkinTabPage();
             this.logText = new System.Windows.Forms.Label();
             this.LogPictruce = new System.Windows.Forms.PictureBox();
@@ -219,9 +218,8 @@
             this.tabCtrlBottom.SelectedIndex = 0;
             this.tabCtrlBottom.Size = new System.Drawing.Size(1022, 200);
             this.tabCtrlBottom.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabCtrlBottom.TabIndex = 3;
-         
-            // 
+            this.tabCtrlBottom.TabIndex = 3; 
+            
             // tabCtrlMain
             // 
             this.tabCtrlMain.Alignment = System.Windows.Forms.TabAlignment.Bottom;
@@ -319,8 +317,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange; 
-            this.ClientSize = new System.Drawing.Size(1024, 741);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+             this.ClientSize = new System.Drawing.Size(1024, 741);
             this.Controls.Add(this.tabCtrlBottom);
             this.Controls.Add(this.staStripMain);
             this.Controls.Add(this.MainSplit);
@@ -329,9 +327,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1024, 726);
-            this.Name = "FormMain"; 
+            this.Name = "FormMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "主框架窗口"; 
+            this.Text = "主框架窗口";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -368,8 +366,7 @@
         private System.Windows.Forms.ToolStripStatusLabel CenterImage;
         private CCWin.SkinControl.SkinTabPage tabPageLog;
         private System.Windows.Forms.RichTextBox rtbLog;
-        private CCWin.SkinControl.SkinTabControl tabCtrlBottom;
-
+        private CCWin.SkinControl.SkinTabControl tabCtrlBottom; 
         private CCWin.SkinControl.SkinTabControl tabCtrlMain;
         private CCWin.SkinControl.SkinTabPage LogPage;
         private System.Windows.Forms.Label logText;

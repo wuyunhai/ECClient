@@ -50,8 +50,8 @@ namespace ZCXJ_CS.Applications
             //读取配置参数
             MachineId = CfgHelper.GetKeyValue("MachineId");
             Process = CfgHelper.GetKeyValue("Process");
-            MESServerIP = CfgHelper.GetKeyValue("MESServerIP");
-            MESServerPort = CfgHelper.GetKeyValue("MESServerPort");
+            MESServerIP = CfgHelper.GetKeyValue("EQCServerIP");
+            MESServerPort = CfgHelper.GetKeyValue("EQCServerPort");
             EQCServerIP = CfgHelper.GetKeyValue("EQCServerIP");
             EQCServerPort = CfgHelper.GetKeyValue("EQCServerPort");
              

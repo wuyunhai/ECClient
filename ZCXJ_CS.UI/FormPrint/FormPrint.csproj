@@ -54,6 +54,12 @@
     <Reference Include="DM_API">
       <HintPath>..\..\Dlls\DM_API.dll</HintPath>
     </Reference>
+    <Reference Include="SuperSocket.ClientEngine.Common">
+      <HintPath>..\..\Dlls\SuperSocket.ClientEngine.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine.Core">
+      <HintPath>..\..\Dlls\SuperSocket.ClientEngine.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -85,9 +91,9 @@
       <Project>{ccc4051e-9b2c-4dd1-92bf-d4fdb959f077}</Project>
       <Name>ZCXJ_CS.Applications</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ZCXJ_CS.Utilities\LogHelper\LogHelper.csproj">
-      <Project>{43DCF446-4179-46C4-9C5C-BFB5D87E4897}</Project>
-      <Name>LogHelper</Name>
+    <ProjectReference Include="..\..\ZCXJ_CS.Utilities\Common\Common.csproj">
+      <Project>{26B929F0-E61C-4905-9F07-9FE59324986D}</Project>
+      <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\UIBase\UIBase.csproj">
       <Project>{695A088F-0592-4C1C-901D-69D8C6E6F6D9}</Project>

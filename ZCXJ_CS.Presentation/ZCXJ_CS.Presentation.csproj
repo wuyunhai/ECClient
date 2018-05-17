@@ -134,21 +134,13 @@
       <Project>{695A088F-0592-4C1C-901D-69D8C6E6F6D9}</Project>
       <Name>UIBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\ConfigHelper\ConfigHelper.csproj">
-      <Project>{E202C521-22E9-477E-B376-277935A43978}</Project>
-      <Name>ConfigHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\JsonHelper\JsonHelper.csproj">
-      <Project>{DF903017-CA0F-430A-A9AA-4DDC4C355449}</Project>
-      <Name>JsonHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZCXJ_CS.Utilities\LogHelper\LogHelper.csproj">
-      <Project>{43DCF446-4179-46C4-9C5C-BFB5D87E4897}</Project>
-      <Name>LogHelper</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ZCXJ_CS.Applications\ZCXJ_CS.Applications.csproj">
       <Project>{CCC4051E-9B2C-4DD1-92BF-D4FDB959F077}</Project>
       <Name>ZCXJ_CS.Applications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZCXJ_CS.Utilities\Common\Common.csproj">
+      <Project>{26B929F0-E61C-4905-9F07-9FE59324986D}</Project>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

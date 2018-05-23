@@ -89,13 +89,8 @@ namespace ZCXJ_CS.Presentation
                     currentindex = i;
                 };
                 tsMainTop.Items.Add(tsb);
-                //pnlMainTop.Controls.Add(dicPicbox[i]);
-            }
-            //foreach (var i in keys)
-            //{
-            //    ToolStripButton tsb = new ToolStripButton();
-            //    pnlMainTop.Controls.Add(dicPicbox[i]);
-            //}
+               
+            } 
             if (!FormBase.IsLoaddingShow)
             {
                 ShowUIPlugin(dicUIPlugins[first].PluginForm, true);
@@ -125,24 +120,17 @@ namespace ZCXJ_CS.Presentation
             //设置界面元素
             logText.Text = "程序正在加载中,请稍后...";
             this.Text = string.Format("IA-MES CS端系统 ({0} - {1})", GlobalData.Process, GlobalData.MachineId);
-            //pnlTitle.BackgroundImage = Image.FromFile(ExePath + @"Res\MainTitle_BK.png");
-            //pnlTitle.BackgroundImageLayout = ImageLayout.Stretch;
-
+     
             tsMainTop.Renderer = Antiufo.Controls.Windows7Renderer.Instance;
             tsMainTop.Items.Clear();
-
-            //pnlMainTop.BackgroundImage = Image.FromFile(ExePath + @"\Res\BarPanel.png");
-            //pnlMainTop.BackgroundImageLayout = ImageLayout.Stretch;
-            //staStripMain.BackgroundImage = Image.FromFile(ExePath + @"\Res\StripMain.png");
-            //staStripMain.BackgroundImageLayout = ImageLayout.Stretch;
-            //picLoginUser.Load(ExePath + @"Res\LoginUser.png");
+             
             CenterImage.Image = Image.FromFile(ExePath + @"Res\Network2.png");  
             staStripVersion.Text = "版本：" + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             LogPictruce.Load(ExePath + @"Res\load.gif");
             FormBase.OnLoadingChange += OnFormLoadingChange;
             InitFormMainContext();
             //隐藏条码-日志窗口
-            tabCtrlBottom.Visible = true;
+            tabCtrlBottom.Visible = false;
             //启动网络连接监测线程
             Thread threadPing = new Thread(CheckNetConnection);
             threadPing.IsBackground = true;
@@ -195,8 +183,7 @@ namespace ZCXJ_CS.Presentation
                 {
                     int index = 0;
                     int.TryParse(cfgHelper.GetKeyValue(plugin.PluginId), out index);
-                    if (cfgHelper.IsKeyExists(plugin.PluginId)
-                        && index > 0)
+                    if (cfgHelper.IsKeyExists(plugin.PluginId) && index > 0)
                     {
                         LoadUIPlugin(plugin, index);
                     }
@@ -364,11 +351,7 @@ namespace ZCXJ_CS.Presentation
             staStripTime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //更新当前操作工
             lblLoginUser.Text = "admin";
-            //读SCADA数据
-            if (timeCounter % 5 == 0)
-            {
-                //scada.ReadData();
-            }
+      
             //检查网络连接 
             if (timeCounter % 5 == 0)
             {
@@ -414,9 +397,9 @@ namespace ZCXJ_CS.Presentation
         /// </summary>
         private void staStripTest2_Click(object sender, EventArgs e)
         {
-            //scada.WriteData("MES_Clean", 1);
-            log.Debug("测试启动");
-            //GlobalData.Scada.WriteData("MES_Clean", 1);
+            MainSplit.Panel1Collapsed = !MainSplit.Panel1Collapsed; 
+           
+            log.Debug("测试启动"); 
         }
         #region /// <summary> 退出处理
         /// <summary>
@@ -424,7 +407,7 @@ namespace ZCXJ_CS.Presentation
         /// </summary>
         private void picLoginUser_DoubleClick(object sender, EventArgs e)
         {
-            //TODO
+
         }
 
         /// <summary>
@@ -432,7 +415,7 @@ namespace ZCXJ_CS.Presentation
         /// </summary>
         private void lblLoginUser_DoubleClick(object sender, EventArgs e)
         {
-            //TODO
+
         }
 
         /// <summary>
@@ -455,7 +438,7 @@ namespace ZCXJ_CS.Presentation
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
              DialogResult dr = DlgBox.Show("确定退出本系统吗？", "退出系统", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dr == DialogResult.No)
+            if (dr == DialogResult.Cancel)
             {
                 e.Cancel = true;
                 return;

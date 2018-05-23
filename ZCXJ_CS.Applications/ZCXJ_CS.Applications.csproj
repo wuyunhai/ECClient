@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="GlobalData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransmitData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZCXJ_CS.Utilities\Common\Common.csproj">

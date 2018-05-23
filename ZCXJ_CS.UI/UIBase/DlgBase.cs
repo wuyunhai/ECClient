@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CCWin.SkinControl;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -47,29 +48,31 @@ namespace ZCXJ_CS.UI
             // 
             this.MainsplitContainer.Panel2.Controls.Add(this.flowLayoutBottom);
             this.MainsplitContainer.Size = new System.Drawing.Size(673, 395);
-            this.MainsplitContainer.SplitterDistance = 353;
+            this.MainsplitContainer.SplitterDistance = 358;
             this.MainsplitContainer.SplitterWidth = 1;
             this.MainsplitContainer.TabIndex = 0;
             // 
             // MainPanel
             // 
+            this.MainPanel.BackColor = System.Drawing.Color.White;
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(673, 353);
+            this.MainPanel.Size = new System.Drawing.Size(673, 358);
             this.MainPanel.TabIndex = 0;
             // 
             // flowLayoutBottom
             // 
+            this.flowLayoutBottom.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutBottom.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.flowLayoutBottom.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutBottom.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutBottom.Name = "flowLayoutBottom";
-            this.flowLayoutBottom.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.flowLayoutBottom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutBottom.Size = new System.Drawing.Size(673, 41);
+            this.flowLayoutBottom.Size = new System.Drawing.Size(673, 36);
             this.flowLayoutBottom.TabIndex = 0;
             // 
             // DlgBase
@@ -115,7 +118,13 @@ namespace ZCXJ_CS.UI
         /// <returns></returns>
         public Button GenComandBtn(string Text, string Name, int TabIndex, EventHandler eHandler, DialogResult? btnResult = null)
         {
-            Button Btn = new Button();
+            SkinButton Btn = new SkinButton();
+            Btn.IsDrawGlass = false;
+            Btn.BaseColor = Color.Gainsboro;
+            Btn.MouseBaseColor = Color.WhiteSmoke;
+            Btn.DownBaseColor = Color.Silver;
+            Btn.BorderColor = Color.Silver;
+            Btn.ForeColor = Color.FromArgb(255,45,45,45);
             Btn.Text = Text;
             Btn.Size = new Size(100, 30);
             Btn.Height = 30;

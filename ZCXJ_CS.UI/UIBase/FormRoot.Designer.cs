@@ -46,8 +46,9 @@
             this.RootPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RootPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RootPanel.Location = new System.Drawing.Point(0, 0);
+            this.RootPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RootPanel.Name = "RootPanel";
-            this.RootPanel.Size = new System.Drawing.Size(675, 432);
+            this.RootPanel.Size = new System.Drawing.Size(540, 432);
             this.RootPanel.TabIndex = 0;
             this.RootPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RootPanel_Paint);
             // 
@@ -57,22 +58,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RootMainPanel.Location = new System.Drawing.Point(1, 36);
+            this.RootMainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RootMainPanel.Name = "RootMainPanel";
-            this.RootMainPanel.Size = new System.Drawing.Size(673, 395);
+            this.RootMainPanel.Size = new System.Drawing.Size(538, 395);
             this.RootMainPanel.TabIndex = 2;
             // 
             // TitlePanel
             // 
-            this.TitlePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.TitlePanel.Controls.Add(this.MinButton);
             this.TitlePanel.Controls.Add(this.MaxButton);
             this.TitlePanel.Controls.Add(this.CloseButton);
             this.TitlePanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(0, 0);
-            this.TitlePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TitlePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TitlePanel.Name = "TitlePanel";
-            this.TitlePanel.Size = new System.Drawing.Size(675, 36);
+            this.TitlePanel.Size = new System.Drawing.Size(540, 36);
             this.TitlePanel.TabIndex = 1;
             this.TitlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TitlePanel_Paint);
             this.TitlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titlepanel_MouseDown);
@@ -87,9 +89,10 @@
             this.MinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinButton.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MinButton.ForeColor = System.Drawing.Color.White;
-            this.MinButton.Location = new System.Drawing.Point(566, 1);
+            this.MinButton.Location = new System.Drawing.Point(453, 1);
+            this.MinButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MinButton.Name = "MinButton";
-            this.MinButton.Size = new System.Drawing.Size(36, 34);
+            this.MinButton.Size = new System.Drawing.Size(29, 34);
             this.MinButton.TabIndex = 2;
             this.MinButton.Tag = "";
             this.MinButton.Text = "-";
@@ -106,9 +109,10 @@
             this.MaxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaxButton.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MaxButton.ForeColor = System.Drawing.Color.White;
-            this.MaxButton.Location = new System.Drawing.Point(602, 1);
+            this.MaxButton.Location = new System.Drawing.Point(482, 1);
+            this.MaxButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaxButton.Name = "MaxButton";
-            this.MaxButton.Size = new System.Drawing.Size(36, 34);
+            this.MaxButton.Size = new System.Drawing.Size(29, 34);
             this.MaxButton.TabIndex = 1;
             this.MaxButton.Tag = "";
             this.MaxButton.Text = "□";
@@ -125,9 +129,10 @@
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(638, 1);
+            this.CloseButton.Location = new System.Drawing.Point(510, 1);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(36, 34);
+            this.CloseButton.Size = new System.Drawing.Size(29, 34);
             this.CloseButton.TabIndex = 0;
             this.CloseButton.Text = "×";
             this.CloseButton.UseVisualStyleBackColor = false;
@@ -135,16 +140,16 @@
             // 
             // FormRoot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(675, 432);
+            this.ClientSize = new System.Drawing.Size(540, 432);
             this.Controls.Add(this.RootPanel);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ForeColor = System.Drawing.Color.White;
+            this.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormRoot";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

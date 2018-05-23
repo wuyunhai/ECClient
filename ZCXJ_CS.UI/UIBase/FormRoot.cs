@@ -116,7 +116,7 @@ namespace ZCXJ_CS.UI
             Rectangle rect = RootPanel.ClientRectangle;
             rect.Width -= 1;
             rect.Height -= 1;
-            e.Graphics.DrawRectangle(new Pen(Color.Gray, 1), rect);
+            e.Graphics.DrawRectangle(new Pen(Color.Gainsboro, 1), rect);
         }
         /// <summary>
         /// 单击控制按钮事件
@@ -148,9 +148,9 @@ namespace ZCXJ_CS.UI
             string path = PluginPath + "\\Res\\StripMain.png";
             if (!string.IsNullOrEmpty(PluginPath) && File.Exists(path))
             {
-                Image backimg = Image.FromFile(path);
-                backimg = backimg.GetThumbnailImage(TitlePanel.Width, TitlePanel.Height, null, IntPtr.Zero);
-                g.DrawImage(backimg, 0, 0);
+                //Image backimg = Image.FromFile(path);
+                //backimg = backimg.GetThumbnailImage(TitlePanel.Width, TitlePanel.Height, null, IntPtr.Zero);
+                //g.DrawImage(backimg, 0, 0);
             }
             if (ShowIcon)
             {

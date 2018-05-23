@@ -54,16 +54,20 @@
     <Reference Include="DM_API">
       <HintPath>..\..\Dlls\DM_API.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.ClientEngine.Common, Version=0.3.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dlls\SuperSocket.ClientEngine.Common.dll</HintPath>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Dlls\MetroFramework.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.ClientEngine.Core, Version=0.3.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dlls\SuperSocket.ClientEngine.Core.dll</HintPath>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.10.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SuperSocket.ClientEngine.0.10.0\lib\net45\SuperSocket.ClientEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SuperSocket.ProtoBase, Version=1.7.0.17, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SuperSocket.ProtoBase.1.7.0.17\lib\net45\SuperSocket.ProtoBase.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -87,6 +91,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SocketClient\MesPackageInfo.cs" />
+    <Compile Include="SocketClient\MesReceiveFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ZCXJ_CS.Applications\ZCXJ_CS.Applications.csproj">
@@ -114,6 +120,9 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

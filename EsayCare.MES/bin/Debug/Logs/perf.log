@@ -1,0 +1,14 @@
+﻿2018-05-24 08:41:44,559 Performance - ---------------------------------------------------
+CPU Usage: 0.00%, Physical Memory Usage: 102,006,784.00, Total Thread Count: 36
+AvailableWorkingThreads: 32766, AvailableCompletionPortThreads: 1000
+MaxWorkingThreads: 32767, MaxCompletionPortThreads: 1000
+EsayCare.MES ----------------------------------
+Started Time: 2018/5/24 8:41:44
+Is Running: True
+Total Connections: 0
+Maximum Allowed Connection Number: 1000
+Total Handled Requests: 0
+Request Handling Speed (#/second): 0
+Avialable Sending Queue Items: 256
+Total Sending Queue Items: 256
+

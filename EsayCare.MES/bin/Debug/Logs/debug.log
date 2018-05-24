@@ -1,0 +1,18 @@
+﻿2018-05-24 08:40:10,409 [7] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been created!
+2018-05-24 08:40:10,493 [7] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been initialized!
+2018-05-24 08:40:10,494 [7] DEBUG DefaultBootstrap - The Bootstrap has been initialized!
+2018-05-24 08:40:10,559 [7] DEBUG EsayCare.MES - Listener (0.0.0.0:6543) was started
+2018-05-24 08:41:39,939 [8] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been created!
+2018-05-24 08:41:40,008 [8] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been initialized!
+2018-05-24 08:41:44,447 [8] DEBUG DefaultBootstrap - The PerformanceMonitor has been initialized!
+2018-05-24 08:41:44,447 [8] DEBUG DefaultBootstrap - The Bootstrap has been initialized!
+2018-05-24 08:41:44,507 [8] DEBUG EsayCare.MES - Listener (0.0.0.0:6543) was started
+2018-05-24 08:41:44,512 [8] DEBUG DefaultBootstrap - The PerformanceMonitor has been started!
+2018-05-24 08:43:56,474 [8] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been created!
+2018-05-24 08:43:56,554 [8] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been initialized!
+2018-05-24 08:43:56,556 [8] DEBUG DefaultBootstrap - The Bootstrap has been initialized!
+2018-05-24 08:43:56,603 [8] DEBUG EsayCare.MES - Listener (0.0.0.0:6543) was started
+2018-05-24 08:46:15,054 [7] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been created!
+2018-05-24 08:46:15,143 [7] DEBUG DefaultBootstrap - The server instance EsayCare.MES has been initialized!
+2018-05-24 08:46:15,145 [7] DEBUG DefaultBootstrap - The Bootstrap has been initialized!
+2018-05-24 08:46:15,233 [7] DEBUG EsayCare.MES - Listener (0.0.0.0:6543) was started
